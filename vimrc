@@ -119,8 +119,10 @@ set guifont="Inconsolata Medium 9"
 set laststatus=2
 set statusline=%f%m%r%=%02.v\|%03.l/%03.L
 
-
 "-> Plugins Galore
+"-> Haskell Mode
+let g:haddock_browser="/usr/bin/firefox"
+
 "-> Taglist
 let Tlist_Ctags_Cmd = "/usr/bin/ctags"
 let Tlist_WinWidth = 40
