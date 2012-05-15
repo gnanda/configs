@@ -12,8 +12,5 @@ Command-T Install:
     bundle install
     rake make
 
-    From vim:
-        :call pathogen#helptags()
-
 Notes:
     I can now do my job
