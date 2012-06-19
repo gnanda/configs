@@ -16,6 +16,7 @@ set autoread
 set hidden
 set history=500
 set formatoptions=croql
+set foldmethod=marker
 " I hit these too often accidently, and this will save my sanity
 map Q <Nop>
 imap <C-w> <Nop>
