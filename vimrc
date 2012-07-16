@@ -139,5 +139,5 @@ let yankring_window_width=30
 let yankring_manual_clipboard_check=1 "Makes it check system clipboard for changes when running in terminal
 noremap <silent> <F2> :YRShow<CR>
 
-
-
+"-> AutoPairs
+let g:AutoPairsFlyMode = 0
