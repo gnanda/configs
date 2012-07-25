@@ -17,13 +17,16 @@ set hidden
 set history=500
 set formatoptions=croql
 set foldmethod=marker
+
 " I hit these too often accidently, and this will save my sanity
 map Q <Nop>
 imap <C-w> <Nop>
 "Space clears highlighting
 noremap <silent> <Space> :silent nohl<Bar>echo<CR>
+
+"Doesn't Work, don't know why"
 "MiddleClick paste doesn't get screwed up **No longer need to set paste**
-imap <MiddleMouse> "+p`]a
+""imap <MiddleMouse> "+p`]a
 
 "-> Files
 "   -> UndoFile - allows for a persistant undo between sessions
