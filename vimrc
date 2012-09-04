@@ -4,6 +4,12 @@ call pathogen#infect()
 call pathogen#helptags()
 filetype plugin indent on
 
+"-> GuiOptions
+if has('gui_running')
+    set guioptions=None
+    set guifont=-*-inconsolata-medium-*-*-*-17-120-*-*-*-*-*-*
+endif
+
 "-> Set my leader
 let mapleader = ","
 
@@ -46,7 +52,7 @@ syntax on
 let g:zenburn_old_Visual = 1
 let g:zenburn_alternate_Visual = 1
 let g:zenburn_high_Contrast = 1
-colorscheme tir_black
+colorscheme zenburn
 "hi Normal ctermbg=NONE
 "209 = #e5786d
 hi Search term=NONE cterm=underline ctermfg=208 ctermbg=NONE
@@ -99,7 +105,7 @@ set smartindent
 "-> Searching
 set incsearch
 set hlsearch
-set smartcase" Some tricks for mutt
+set smartcase " Some tricks for mutt
 
 "-> Spelling
 set spelllang=en_us
