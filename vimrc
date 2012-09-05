@@ -7,7 +7,7 @@ filetype plugin indent on
 "-> GuiOptions
 if has('gui_running')
     set guioptions=None
-    set guifont=-*-inconsolata-medium-*-*-*-17-120-*-*-*-*-*-*
+    set guifont=Inconsolata\ Medium\ 8
 endif
 
 "-> Set my leader
@@ -121,9 +121,6 @@ augroup MUTT
   au BufRead ~/.mutt/temp/mutt* map!  <F2>  <ESC>gqqji
   au BufRead ~/.mutt/temp/mutt* map!  <F3>  <ESC>kgqji
 augroup END
-
-"-> Guioptions
-set guifont="Inconsolata Medium 9"
 
 "-> StatusLine
 set laststatus=2
