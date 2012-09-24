@@ -8,7 +8,7 @@ filetype plugin indent on
 if has('gui_running')
     set guioptions=None
     if hostname() == 'thwomp'
-        set guifont=Inconsolata\ Medium\ 8
+        set guifont=peep\ 8
     else
         set guifont=peep\ 11
     endif
