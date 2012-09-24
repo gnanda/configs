@@ -1,3 +1,5 @@
 eclim/
 doc/eclimd.txt
 *.swp
+.netrwhist
+haskellmode.config

@@ -7,7 +7,11 @@ filetype plugin indent on
 "-> GuiOptions
 if has('gui_running')
     set guioptions=None
-    set guifont=Inconsolata\ Medium\ 8
+    if hostname() == 'thwomp'
+        set guifont=Inconsolata\ Medium\ 8
+    else
+        set guifont=peep\ 11
+    endif
 endif
 
 "-> Set my leader
@@ -49,17 +53,17 @@ set cursorline
 "-> Color, Font, and Shape
 syntax on
 "Improve zenburn's appearance
-let g:zenburn_old_Visual = 1
-let g:zenburn_alternate_Visual = 1
-let g:zenburn_high_Contrast = 1
-colorscheme zenburn
+"let g:zenburn_old_Visual = 1
+"let g:zenburn_alternate_Visual = 1
+"let g:zenburn_high_Contrast = 1
+colorscheme jellybeans
 "hi Normal ctermbg=NONE
 "209 = #e5786d
-hi Search term=NONE cterm=underline ctermfg=208 ctermbg=NONE
-hi Comment cterm=italic
-hi SpecialComment cterm=italic
-hi CursorLine cterm=None ctermfg=None ctermbg=None
-hi CursorLineNr ctermfg=003
+"hi Search term=NONE cterm=underline ctermfg=208 ctermbg=NONE
+"hi Comment cterm=italic
+"hi SpecialComment cterm=italic
+"hi CursorLine cterm=None ctermfg=None ctermbg=None
+"hi CursorLineNr ctermfg=003
 "-> Set number/relativenumber smartly
 autocmd InsertEnter * set number
 autocmd InsertLeave * set relativenumber
