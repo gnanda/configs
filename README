@@ -9,7 +9,6 @@ Install:
 
 Command-T Install:
     cd ~/.vim/bundle/command-t
-    bundle install
     rake make
 
 Notes:
