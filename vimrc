@@ -60,8 +60,8 @@ colorscheme jellybeans
 "hi Normal ctermbg=NONE
 "209 = #e5786d
 "hi Search term=NONE cterm=underline ctermfg=208 ctermbg=NONE
-"hi Comment cterm=italic
-"hi SpecialComment cterm=italic
+hi Comment cterm=None gui=None
+hi SpecialComment cterm=None gui=None
 "hi CursorLine cterm=None ctermfg=None ctermbg=None
 "hi CursorLineNr ctermfg=003
 "-> Set number/relativenumber smartly
