@@ -40,9 +40,12 @@ noremap <silent> <Space> :silent nohl<Bar>echo<CR>
 
 "-> Files
 "   -> UndoFile - allows for a persistant undo between sessions
+"   -> nobackup - prevents vim from making a backup file before writing
+"   -> dir      - where vim stores swap files
 set undofile
-set undodir=~/.vim_undo
+set undodir=~/.vimlocal/undo
 set nobackup
+set dir=~/.vimlocal/swap
 
 "-> Stuff on screen
 set number
@@ -62,6 +65,7 @@ colorscheme jellybeans
 "hi Search term=NONE cterm=underline ctermfg=208 ctermbg=NONE
 hi Comment cterm=None gui=None
 hi SpecialComment cterm=None gui=None
+hi StatusLine cterm=None gui=None
 "hi CursorLine cterm=None ctermfg=None ctermbg=None
 "hi CursorLineNr ctermfg=003
 "-> Set number/relativenumber smartly
@@ -133,6 +137,7 @@ set statusline=%f%m%r%=%02.v\|%03.l/%03.L
 "-> Plugins Galore
 "-> Haskell Mode
 let g:haddock_browser="/usr/bin/firefox"
+let g:haddock_indexfiledir="~/.vimlocal"
 au Bufenter *.hs compiler ghc
 
 "-> Taglist
@@ -142,12 +147,14 @@ noremap <F4> :TlistToggle<cr>
 noremap <F5> :TlistUpdate<cr>
 
 "-> Yankring
-let yankring_min_element_length = 2 "prevents the addition of single character deletes
-let yankring_window_auto_close=0
-let yankring_window_use_horiz=0
-let yankring_window_use_right=1
-let yankring_window_width=30
-let yankring_manual_clipboard_check=1 "Makes it check system clipboard for changes when running in terminal
+let g:yankring_min_element_length = 2 "prevents the addition of single character deletes
+let g:yankring_window_auto_close=0
+let g:yankring_window_use_horiz=0
+let g:yankring_window_use_right=1
+let g:yankring_window_width=30
+let g:yankring_manual_clipboard_check=1 "Makes it check system clipboard for changes when running in terminal
+let g:yankring_history_dir='~/.vimlocal'
+let g:yankring_history_file='yr_hist'
 noremap <silent> <F2> :YRShow<CR>
 
 "-> AutoPairs

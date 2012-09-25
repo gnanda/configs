@@ -6,6 +6,7 @@ Install:
     git submodule init
     git submodule update
     ln -s ~/.vim/vimrc ~/.vimrc
+    mkdir -p ~/.vimlocal/{swap,undo}
 
 Command-T Install:
     cd ~/.vim/bundle/command-t
