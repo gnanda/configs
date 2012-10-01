@@ -6,7 +6,7 @@ filetype plugin indent on
 
 "-> GuiOptions
 if has('gui_running')
-    set guioptions=None
+    set guioptions=ac
     if hostname() == 'thwomp'
         set guifont=peep\ 8
     else
@@ -59,7 +59,7 @@ syntax on
 "let g:zenburn_old_Visual = 1
 "let g:zenburn_alternate_Visual = 1
 "let g:zenburn_high_Contrast = 1
-colorscheme jellybeans
+colorscheme jellybeans_noFontFX
 "hi Normal ctermbg=NONE
 "209 = #e5786d
 "hi Search term=NONE cterm=underline ctermfg=208 ctermbg=NONE
@@ -69,8 +69,8 @@ hi StatusLine cterm=None gui=None
 "hi CursorLine cterm=None ctermfg=None ctermbg=None
 "hi CursorLineNr ctermfg=003
 "-> Set number/relativenumber smartly
-autocmd InsertEnter * set number
-autocmd InsertLeave * set relativenumber
+"autocmd InsertEnter * set number
+"autocmd InsertLeave * set relativenumber
 
 "-> Setup wildmenu so that I can see my tab completion options
 set wildmenu

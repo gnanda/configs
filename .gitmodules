@@ -49,3 +49,6 @@
 [submodule "bundle/syntax-slim-conf"]
 	path = bundle/syntax-slim-conf
 	url = git://github.com/bbommarito/vim-slim.git
+[submodule "bundle/haskell-conceal"]
+	path = bundle/haskell-conceal
+	url = git://github.com/Twinside/vim-haskellConceal.git
