@@ -159,3 +159,6 @@ noremap <silent> <F2> :YRShow<CR>
 
 "-> AutoPairs
 let g:AutoPairsFlyMode = 0
+
+"-> SuperTab
+let g:SuperTabDefaultCompletionType = "context"
