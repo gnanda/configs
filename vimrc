@@ -14,8 +14,14 @@ if has('gui_running')
     endif
 endif
 
-"-> Set my leader
-let mapleader = ","
+"-> Make vim colorschemes work with Gnome-Terminal
+if $COLORTERM == ('gnome-terminal' || 'xterm')
+    set t_Co=256
+endif
+
+"-> StatusLine
+set laststatus=2
+set statusline=%f%m%r%=%02.v\|%03.l/%03.L
 
 "-> General Niceities
 "   -> autoread - automatically re-read file if it has changed outside the buffer
@@ -31,12 +37,24 @@ set foldmethod=marker
 " I hit these too often accidently, and this will save my sanity
 map Q <Nop>
 imap <C-w> <Nop>
-"Space clears highlighting
-noremap <silent> <Space> :silent nohl<Bar>echo<CR>
 
-"Doesn't Work, don't know why"
-"MiddleClick paste doesn't get screwed up **No longer need to set paste**
-""imap <MiddleMouse> "+p`]a
+
+"-> Set my leader
+let mapleader = ","
+
+"-> More mappings
+noremap ' "
+noremap " '
+"   -> Space clears highlighting
+noremap <silent> <Space> :silent nohl<Bar>echo<CR>
+"   -> Movement
+set scrolloff=4
+set virtualedit=onemore
+"   -> Between Panes - Maps C-w, direction to move to pane in that direction
+map <silent>,h <C-w>h
+map <silent>,j <C-w>j
+map <silent>,k <C-w>k
+map <silent>,l <C-w>l
 
 "-> Files
 "   -> UndoFile - allows for a persistant undo between sessions
@@ -55,32 +73,15 @@ set showmatch
 set cursorline
 "-> Color, Font, and Shape
 syntax on
-"Improve zenburn's appearance
-"let g:zenburn_old_Visual = 1
-"let g:zenburn_alternate_Visual = 1
-"let g:zenburn_high_Contrast = 1
 colorscheme jellybeans_noFontFX
-"hi Normal ctermbg=NONE
-"209 = #e5786d
-"hi Search term=NONE cterm=underline ctermfg=208 ctermbg=NONE
 hi Comment cterm=None gui=None
 hi SpecialComment cterm=None gui=None
 hi StatusLine cterm=None gui=None
-"hi CursorLine cterm=None ctermfg=None ctermbg=None
-"hi CursorLineNr ctermfg=003
-"-> Set number/relativenumber smartly
-"autocmd InsertEnter * set number
-"autocmd InsertLeave * set relativenumber
 
 "-> Setup wildmenu so that I can see my tab completion options
 set wildmenu
 set wildmode=list:longest
 set wildchar=<Tab>
-
-"-> Make vim colorschemes work with Gnome-Terminal
-if $COLORTERM == ('gnome-terminal' || 'xterm')
-    set t_Co=256
-endif
 
 "-> Show invisibles
 "   -> This shows
@@ -89,16 +90,7 @@ endif
 "       Also The foreground and background of these chars are set
 set list listchars=tab:\|\ ,trail:¤,nbsp:¤
 hi SpecialKey ctermbg=NONE
-hi SpecialKey ctermfg=red
-
-"-> Movement
-set scrolloff=4
-set virtualedit=onemore
-"   -> Between Panes - Maps C-w, direction to move to pane in that direction
-    map <silent>,h <C-w>h
-    map <silent>,j <C-w>j
-    map <silent>,k <C-w>k
-    map <silent>,l <C-w>l
+hi SpecialKey ctermfg=red guifg=red
 
 "-> Tab Key
 "   -> expandtab - use spaces inplace of tab characters, this setting will occasionally bite you in the ass
@@ -107,8 +99,6 @@ set tabstop=4
 set shiftwidth=4
 set autoindent
 set smartindent
-"   -> Language Specific options
-"       -> Now found in ~/.vim/ftplugin/<language>.vim
 
 "-> Searching
 set incsearch
@@ -130,9 +120,6 @@ augroup MUTT
   au BufRead ~/.mutt/temp/mutt* map!  <F3>  <ESC>kgqji
 augroup END
 
-"-> StatusLine
-set laststatus=2
-set statusline=%f%m%r%=%02.v\|%03.l/%03.L
 
 "-> Plugins Galore
 "-> Haskell Mode
