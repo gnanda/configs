@@ -52,3 +52,9 @@
 [submodule "bundle/haskell-conceal"]
 	path = bundle/haskell-conceal
 	url = git://github.com/Twinside/vim-haskellConceal.git
+[submodule "bundle/perl-support"]
+	path = bundle/perl-support
+	url = git://github.com/vim-scripts/perl-support.vim.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = git://github.com/ervandew/supertab.git
