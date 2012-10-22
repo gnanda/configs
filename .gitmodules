@@ -13,9 +13,6 @@
 [submodule "bundle/latex-suite"]
 	path = bundle/latex-suite
 	url = git://github.com/gerw/vim-latex-suite.git
-[submodule "bundle/auto-pairs"]
-	path = bundle/auto-pairs
-	url = git://github.com/jiangmiao/auto-pairs.git
 [submodule "bundle/command-t"]
 	path = bundle/command-t
 	url = git://git.wincent.com/command-t.git
