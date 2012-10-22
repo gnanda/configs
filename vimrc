@@ -133,19 +133,6 @@ let Tlist_WinWidth=40
 noremap <F4> :TlistToggle<cr>
 noremap <F5> :TlistUpdate<cr>
 
-"-> Yankring
-let g:yankring_min_element_length=2 "prevents the addition of single character deletes
-let g:yankring_window_auto_close=0
-let g:yankring_window_use_horiz=0
-let g:yankring_window_use_right=1
-let g:yankring_window_width=30
-let g:yankring_clipboard_monitor=1
-let g:yankring_manual_clipboard_check=1 "Makes it check system clipboard for changes when running in terminal
-let g:yankring_max_history=50
-let g:yankring_history_dir='~/.vimlocal'
-let g:yankring_history_file='yr_hist'
-noremap <silent> <F2> :YRShow<CR>
-
 "-> SuperTab
 let g:SuperTabDefaultCompletionType="context"
 
