@@ -37,6 +37,7 @@ set foldmethod=marker
 " I hit these too often accidently, and this will save my sanity
 map Q <Nop>
 imap <C-w> <Nop>
+cmap ` ~/
 
 
 "-> Set my leader
@@ -107,19 +108,8 @@ set smartcase " Some tricks for mutt
 
 "-> Spelling
 set spelllang=en_us
-set nospell
-
-"-> Happy Config for Mutt
-" F1 through F3 re-wraps paragraphs in useful ways
-augroup MUTT
-  au BufRead ~/.mutt/temp/mutt* set spell
-  au BufRead ~/.mutt/temp/mutt* nmap  <F1>  gqap
-  au BufRead ~/.mutt/temp/mutt* nmap  <F2>  gqqj
-  au BufRead ~/.mutt/temp/mutt* nmap  <F3>  kgqj au BufRead ~/.mutt/temp/mutt* map!  <F1>  <ESC>gqapi
-  au BufRead ~/.mutt/temp/mutt* map!  <F2>  <ESC>gqqji
-  au BufRead ~/.mutt/temp/mutt* map!  <F3>  <ESC>kgqji
-augroup END
-
+set spell
+noremap <silent> <F3> :TSpellHL<cr>
 
 "-> Plugins Galore
 "-> Haskell Mode
@@ -130,7 +120,7 @@ au Bufenter *.hs compiler ghc
 "-> Taglist
 let Tlist_Ctags_Cmd="/usr/bin/ctags"
 let Tlist_WinWidth=40
-noremap <F4> :TlistToggle<cr>
+noremap <F2> :TlistToggle<cr>
 noremap <F5> :TlistUpdate<cr>
 
 "-> SuperTab
