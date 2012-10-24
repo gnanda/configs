@@ -17,7 +17,6 @@ fun! ToggleSpellingHighlight()
         echo 'spell is unset -> turning on spell'
         set spell
         let g:genUtils_SpellHL = 1
-        return g:genUtils_SpellHL
     endif
 
     if !exists("g:genUtils_SpellHL")
@@ -30,12 +29,14 @@ fun! ToggleSpellingHighlight()
         highlight SpellBad NONE
         highlight SpellLocal NONE
         highlight SpellRare NONE
+        highlight SpellCap NONE
     else
         "Turn it on
         let g:genUtils_SpellHL = 1
         highlight SpellBad gui=underline term=underline
         highlight SpellLocal gui=italic term=italic
         highlight SpellRare gui=bold term=bold
+        highlight SpellCap gui=bold term=bold
     endif
 
 

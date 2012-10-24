@@ -109,6 +109,8 @@ set smartcase " Some tricks for mutt
 "-> Spelling
 set spelllang=en_us
 set spell
+"Toggle spell checker highlighting off initially
+au Bufenter * TSpellHL
 noremap <silent> <F3> :TSpellHL<cr>
 
 "-> Plugins Galore
