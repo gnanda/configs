@@ -52,3 +52,6 @@
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = git://github.com/ervandew/supertab.git
+[submodule "bundle/syntax-jack"]
+	path = bundle/syntax-jack
+	url = git@github.com:zirrostig/vim-jack-syntax.git
