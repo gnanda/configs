@@ -13,7 +13,7 @@ endfun
 "Toggles spell checker highlighting on and off, allowing me to still use
 "spell checker commands, even if the word is not visibly highlighted
 fun! ToggleSpellingHighlight()
-    if ! &spell "spell is not set
+    if ! &spell && &ft != 'help' "spell is not set
         echo 'spell is unset -> turning on spell'
         set spell
         let g:genUtils_SpellHL = 1

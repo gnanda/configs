@@ -55,3 +55,12 @@
 [submodule "bundle/syntax-jack"]
 	path = bundle/syntax-jack
 	url = git@github.com:zirrostig/vim-jack-syntax.git
+[submodule "bundle/simplefold"]
+	path = bundle/simplefold
+	url = git://github.com/vim-scripts/simplefold.git
+[submodule "bundle/skybison"]
+	path = bundle/skybison
+	url = git://github.com/paradigm/SkyBison.git
+[submodule "bundle/symbols"]
+	path = bundle/symbols
+	url = git://github.com/mattsacks/vim-symbols.git

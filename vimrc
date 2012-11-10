@@ -134,3 +134,8 @@ let g:Perl_LoadMenus='no'
     "Ctrl-j is for jumping to the next item in a template insertion, but I
     "already use it for split nav
 let g:Perl_Ctrl_j='off'
+
+"-> Symbols
+let g:symbol_patterns = {}
+let g:symbol_patterns.python = ['^\s*def\s\+\zs\w\+\ze', '^\s*class\s\+\zs\w\+\ze']
+let g:symbol_patterns.perl = ['^\s*sub\s\+\zs\w\+\ze']
