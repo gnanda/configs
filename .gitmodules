@@ -52,3 +52,12 @@
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = git://github.com/ervandew/supertab.git
+[submodule "bundle/simplefold"]
+	path = bundle/simplefold
+	url = git://github.com/vim-scripts/simplefold.git
+[submodule "bundle/skybison"]
+	path = bundle/skybison
+	url = git://github.com/paradigm/SkyBison.git
+[submodule "bundle/symbols"]
+	path = bundle/symbols
+	url = git://github.com/mattsacks/vim-symbols.git
