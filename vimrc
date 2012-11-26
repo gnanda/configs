@@ -33,7 +33,7 @@ if has('gui_running')
         set guifont=peep\ 11
     endif
 endif
-     
+
 "-> Make vim colorschemes work with Gnome-Terminal
 if $COLORTERM == ('gnome-terminal' || 'xterm')
     set t_Co=256
@@ -102,7 +102,7 @@ nnoremap <C-y> 4<C-y>
 nmap <silent> <F4> :set nolist!<CR>
 
 "Toggle spell checker highlighting off initially
-au Bufenter * TSpellHL
+au BufNew * TSpellHL
 noremap <silent> <F3> :TSpellHL<cr>
 
 "--> Other Stuff <------------------------------------------------------------
