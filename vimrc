@@ -16,7 +16,7 @@ set hidden
 set history=500
 set formatoptions=croql
 set foldmethod=marker
-set switchbuf=useopen,usetab,split
+set switchbuf=usetab,split
 "-> Shortmess
 "   a = filmnrwx
 "   help shortmess for more
