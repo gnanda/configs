@@ -137,15 +137,11 @@ set smartcase
 set spelllang=en_us
 set spell
 
-<<<<<<< HEAD
 "->Filetype specific
 au BufEnter *.tex set textwidth=100
 au BufEnter *.tex set formatoptions=tcroql
 
-"-> Plugins Galore
-=======
 "--> Plugins Galore <---------------------------------------------------------
->>>>>>> d09132ce31254bce957786bfeef4fe78cec576df
 "-> Haskell Mode
 let g:haddock_browser="/usr/bin/firefox"
 let g:haddock_indexfiledir="~/.vimlocal"
