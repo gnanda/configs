@@ -52,9 +52,6 @@
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = git://github.com/ervandew/supertab.git
-[submodule "bundle/syntax-jack"]
-	path = bundle/syntax-jack
-	url = git@github.com:zirrostig/vim-jack-syntax.git
 [submodule "bundle/simplefold"]
 	path = bundle/simplefold
 	url = git://github.com/vim-scripts/simplefold.git
@@ -64,3 +61,9 @@
 [submodule "bundle/symbols"]
 	path = bundle/symbols
 	url = git://github.com/mattsacks/vim-symbols.git
+[submodule "bundle/syntax-jack"]
+	path = bundle/syntax-jack
+	url = git@github.com:zirrostig/vim-jack-syntax.git
+[submodule "bundle/syntax-scala"]
+	path = bundle/syntax-scala
+	url = git://github.com/jergason/scala.vim.git
