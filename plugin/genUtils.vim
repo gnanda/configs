@@ -16,14 +16,9 @@ fun! ToggleSpellingHighlight()
     if ! &spell && &ft != 'help' "spell is not set
         echo 'spell is unset -> turning on spell'
         set spell
-        let g:genUtils_SpellHL = 1
     endif
 
-    if !exists("g:genUtils_SpellHL")
-        let g:genUtils_SpellHL = 1
-    endif
-
-    if g:genUtils_SpellHL > 0
+    if exists("g:genUtils_SpellHL") && g:genUtils_SpellHL > 0
         "Turn it off
         let g:genUtils_SpellHL = 0
         highlight SpellBad NONE
@@ -38,8 +33,6 @@ fun! ToggleSpellingHighlight()
         highlight SpellRare gui=bold term=bold
         highlight SpellCap gui=bold term=bold
     endif
-
-
 endfun
 
 "Saves/Restores Cursor position

@@ -88,11 +88,11 @@ noremap <silent> <Space> :silent nohl<Bar>echo<CR>
 set scrolloff=4
 set sidescrolloff=8
 set virtualedit=onemore
-"-> Between Panes - Maps C-w, direction to move to pane in that direction
-map <silent>,h <C-w>h
-map <silent>,j <C-w>j
-map <silent>,k <C-w>k
-map <silent>,l <C-w>l
+"-> Between Panes - Maps leader-direction to move to pane in that direction
+map <silent><leader>h <C-w>h
+map <silent><leader>j <C-w>j
+map <silent><leader>k <C-w>k
+map <silent><leader>l <C-w>l
 
 "-> Scroll 4 lines at a time
 nnoremap <C-e> 4<C-e>
@@ -102,7 +102,7 @@ nnoremap <C-y> 4<C-y>
 nmap <silent> <F4> :set nolist!<CR>
 
 "Toggle spell checker highlighting off initially
-au BufNew * TSpellHL
+au BufNewFile,BufReadPre,FilterReadPre,FileReadPre * TSpellHL
 noremap <silent> <F3> :TSpellHL<cr>
 
 "--> Other Stuff <------------------------------------------------------------
