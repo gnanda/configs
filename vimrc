@@ -113,6 +113,10 @@ set spell
 au Bufenter * TSpellHL
 noremap <silent> <F3> :TSpellHL<cr>
 
+"->Filetype specific
+au BufEnter *.tex set textwidth=100
+au BufEnter *.tex set formatoptions=tcroql
+
 "-> Plugins Galore
 "-> Haskell Mode
 let g:haddock_browser="/usr/bin/firefox"
