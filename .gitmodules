@@ -67,3 +67,6 @@
 [submodule "bundle/syntax-scala"]
 	path = bundle/syntax-scala
 	url = git://github.com/jergason/scala.vim.git
+[submodule "bundle/smart-swap"]
+	path = bundle/smart-swap
+	url = git@github.com:zirrostig/vim-smart-swap.git
