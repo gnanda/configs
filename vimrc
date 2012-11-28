@@ -167,3 +167,7 @@ let g:Perl_Ctrl_j='off'
 let g:symbol_patterns = {}
 let g:symbol_patterns.python = ['^\s*def\s\+\zs\w\+\ze', '^\s*class\s\+\zs\w\+\ze']
 let g:symbol_patterns.perl = ['^\s*sub\s\+\zs\w\+\ze']
+
+"-> SmartSwap
+let g:SmartSwap_CheckDate = 1
+let g:SmartSwap_CheckDiff = 1
