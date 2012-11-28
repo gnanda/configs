@@ -99,7 +99,7 @@ nnoremap <C-e> 4<C-e>
 nnoremap <C-y> 4<C-y>
 
 "Hide my list chars if I want
-nmap <silent> <F4> :set nolist!<CR>
+map <silent> <F4> :set nolist!<CR>
 
 "Toggle spell checker highlighting off initially
 au BufNewFile,BufReadPre,FilterReadPre,FileReadPre * TSpellHL
