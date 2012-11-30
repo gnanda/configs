@@ -171,3 +171,6 @@ let g:symbol_patterns.perl = ['^\s*sub\s\+\zs\w\+\ze']
 "-> SmartSwap
 let g:SmartSwap_CheckDate = 1
 let g:SmartSwap_CheckDiff = 1
+
+"-> Turn of Haskell-Conceal for the time being
+let g:no_haskell_conceal = 1
