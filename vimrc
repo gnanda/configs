@@ -87,7 +87,7 @@ noremap <silent> <Space> :silent nohl<Bar>echo<CR>
 "-> Movement
 set scrolloff=4
 set sidescrolloff=8
-set virtualedit=onemore
+set virtualedit=onemore,block
 "-> Between Panes - Maps leader-direction to move to pane in that direction
 map <silent><leader>h <C-w>h
 map <silent><leader>j <C-w>j
