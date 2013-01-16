@@ -110,10 +110,12 @@ noremap <silent> <F3> :TSpellHL<cr>
 "   UndoFile - allows for a persistant undo between sessions
 "   nobackup - prevents vim from making a backup file before writing
 "   dir      - where vim stores swap files
-set undofile
-set undodir=~/.vimlocal/undo
-set nobackup
-set dir=~/.vimlocal/swap
+if exists('+undofile')
+    set undofile
+    set undodir=~/.vimlocal/undo
+    set nobackup
+    set dir=~/.vimlocal/swap
+endif
 
 "-> Setup wildmenu so that I can see my tab completion options
 set wildmenu
