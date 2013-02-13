@@ -81,7 +81,7 @@ set spell
 
 "->Filetype specific
 au BufEnter *.tex set textwidth=100
-au BufEnter *.tex set formatoptions=tcroql
+au BufEnter *.tex set formatoptions+=t
 
 "-> Color, Font, and Shape
 syntax on
@@ -112,6 +112,7 @@ let mapleader=","
 nmap <silent><leader>fs :NoTrail<cr>
 nmap <silent><leader>sv :vsplit<cr>
 nmap <silent><leader>sh :split<cr>
+nmap <silent><leader>sc :close<cr>
 nmap <silent><leader>tn :tabnew<cr>
 nmap <silent><leader>tc :tabclose<cr>
 nmap <silent><leader>c \\
@@ -205,7 +206,7 @@ if executable('ack') || executable('ag')
     if executable('ag')
         let g:ackprg="ag --nogroup --smart-case --follow"
     endif
-    map <leader>/ :Ack 
+    map <leader>/ :Ack
 endif
 
 "-> Indent Guides
