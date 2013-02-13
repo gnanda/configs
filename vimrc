@@ -3,30 +3,27 @@ set nocompatible
 call pathogen#infect()
 call pathogen#helptags()
 filetype plugin indent on
+runtime macros/matchit.vim
 
-"--> General Niceities <------------------------------------------------------
-"   autoread - automatically re-read file if it has changed outside the buffer
-"   formatoptions - does many things to have vim auto format stuff for me
+"--> General Settings <------------------------------------------------------
+set autoread
+set backspace=eol,indent,start
+set foldmethod=marker
+set formatoptions=croql
+set hidden
+set history=500
 set mouse=n
 set mousefocus
 set mousehide
-set backspace=eol,indent,start
-set autoread
-set hidden
-set history=500
-set formatoptions=croql
-set foldmethod=marker
-set switchbuf=usetab,split
-"-> Shortmess
-"   a = filmnrwx
-"   help shortmess for more
+set nomore
 set shortmess=aoOtI
-runtime macros/matchit.vim
+set splitbelow
+set splitright
+set switchbuf=usetab,split
 
-"--> Appearance <-------------------------------------------------------------
 "-> GuiOptions
 if has('gui_running')
-    set guioptions=ac
+    set guioptions=act
     if hostname() == 'thwomp'
         set guifont=peep\ 8
     else
@@ -39,10 +36,6 @@ if $COLORTERM == ('gnome-terminal' || 'xterm')
     set t_Co=256
 endif
 
-"-> StatusLine
-set laststatus=2
-set statusline=%f%m%r%=%02.v\|%03.l/%03.L
-
 "-> Make window title useful for terminal vim
 set title
 
@@ -54,62 +47,12 @@ set showmatch
 set cursorline
 set pumheight=8
 
-"-> Color, Font, and Shape
-syntax on
-colorscheme jellybeans_noFontFX
-hi Comment cterm=None gui=None
-hi SpecialComment cterm=None gui=None
-hi StatusLine cterm=None gui=None
-
-"-> Show invisibles
-"   -> This shows
-"       Trailing spaces
-"       Empty lines with spaces
-"       Also The foreground and background of these chars are set
-set list listchars=tab:\|\ ,trail:¤,nbsp:¤
-hi SpecialKey ctermbg=NONE
-hi SpecialKey ctermfg=red guifg=red
-
-"--> Mappings <---------------------------------------------------------------
-" I hit these too often accidently, and this will save my sanity
-map Q <Nop>
-imap <C-w> <Nop>
-cmap ` ~/
-
-"-> Set my leader
-let mapleader=","
-
-"-> More mappings
-noremap ' "
-noremap " '
-"-> Space clears highlighting
-noremap <silent> <Space> :silent nohl<Bar>echo<CR>
 "-> Movement
 set scrolloff=4
 set sidescrolloff=8
 set virtualedit=onemore,block
-"-> Between Panes - Maps leader-direction to move to pane in that direction
-map <silent><leader>h <C-w>h
-map <silent><leader>j <C-w>j
-map <silent><leader>k <C-w>k
-map <silent><leader>l <C-w>l
 
-"-> Scroll 4 lines at a time
-nnoremap <C-e> 4<C-e>
-nnoremap <C-y> 4<C-y>
-
-"Hide my list chars if I want
-map <silent> <F4> :set nolist!<CR>
-
-"Toggle spell checker highlighting off initially
-au BufNewFile,BufReadPre,FilterReadPre,FileReadPre * TSpellHL
-noremap <silent> <F3> :TSpellHL<cr>
-
-"--> Other Stuff <------------------------------------------------------------
 "-> Files
-"   UndoFile - allows for a persistant undo between sessions
-"   nobackup - prevents vim from making a backup file before writing
-"   dir      - where vim stores swap files
 set undofile
 set undodir=~/.vimlocal/undo
 set nobackup
@@ -121,7 +64,6 @@ set wildmode=list:longest
 set wildchar=<Tab>
 
 "-> Tab Key
-"   expandtab - use spaces inplace of tab characters, this setting will occasionally bite you in the ass
 set expandtab
 set tabstop=4
 set shiftwidth=4
@@ -140,6 +82,89 @@ set spell
 "->Filetype specific
 au BufEnter *.tex set textwidth=100
 au BufEnter *.tex set formatoptions=tcroql
+
+"-> Color, Font, and Shape
+syntax on
+colorscheme jellybeans_noFontFX
+hi Comment cterm=None gui=None
+hi SpecialComment cterm=None gui=None
+hi StatusLine cterm=None gui=None
+
+"-> Show invisibles
+"   -> This shows
+"       Trailing spaces
+"       Empty lines with spaces
+"       Also The foreground and background of these chars are set
+set list listchars=tab:\|\ ,trail:¤,nbsp:¤
+hi SpecialKey ctermbg=NONE
+hi SpecialKey ctermfg=red guifg=red
+
+"-> StatusLine
+set laststatus=2
+set statusline=%f%m%r%=%02.v\|%03.l/%03.L
+
+"--> Mappings <---------------------------------------------------------------
+"Note: More mappings may be in the plugins section
+"-> Set my leader
+let mapleader=","
+
+"-> Leader Commands
+nmap <silent><leader>fs :NoTrail<cr>
+nmap <silent><leader>sv :vsplit<cr>
+nmap <silent><leader>sh :split<cr>
+nmap <silent><leader>tn :tabnew<cr>
+nmap <silent><leader>tc :tabclose<cr>
+nmap <silent><leader>c \\
+nmap <silent><leader>C \\u
+
+" I hit these too often accidently, and this will save my sanity
+map Q <Nop>
+imap <C-w> <Nop>
+
+" This is genius, and set in my shell as well
+cmap ` ~/
+
+" Fix Search
+vnoremap / /\v
+nnoremap / /\v
+vnoremap ? ?\v
+nnoremap ? ?\v
+
+" A proper use for arrow keys
+nnoremap <down> :bprevious<CR>
+nnoremap <up> :bnext<CR>
+nnoremap <left> :tabnext<CR>
+nnoremap <right> :tabprevious<CR>
+
+"-> Flip usage of quotes
+noremap ' "
+noremap " '
+
+"-> Space clears highlighting
+noremap <silent> <Space> :silent nohl<Bar>echo<CR>
+
+"-> Between Panes - Maps leader-direction to move to pane in that direction
+map <silent><leader>h <C-w>h
+map <silent><leader>j <C-w>j
+map <silent><leader>k <C-w>k
+map <silent><leader>l <C-w>l
+
+"-> Scroll 4 lines at a time
+nnoremap <C-e> 4<C-e>
+nnoremap <C-y> 4<C-y>
+
+"-> Up and Down on wraped lines
+noremap j gj
+noremap k gk
+
+"Hide my list chars if I want
+noremap <silent><F4> :set list!<CR>
+inoremap <silent><F4> :set list!<CR>
+
+"Toggle spell checker highlighting off initially
+au BufNewFile,BufReadPre,FilterReadPre,FileReadPre * TSpellHL
+noremap <silent><F3> :TSpellHL<cr>
+inoremap <silent><F3> :TSpellHL<cr>
 
 "--> Plugins Galore <---------------------------------------------------------
 "-> Haskell Mode
@@ -174,3 +199,15 @@ let g:SmartSwap_CheckDiff = 1
 
 "-> Turn of Haskell-Conceal for the time being
 let g:no_haskell_conceal = 1
+
+"-> Ack.vim
+if executable('ack') || executable('ag')
+    if executable('ag')
+        let g:ackprg="ag --nogroup --smart-case --follow"
+    endif
+    map <leader>/ :Ack 
+endif
+
+"-> Indent Guides
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=black ctermbg=black

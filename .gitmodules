@@ -40,9 +40,6 @@
 [submodule "bundle/hexHighlight"]
 	path = bundle/hexHighlight
 	url = git://github.com/yurifury/hexHighlight.git
-[submodule "bundle/syntax-slim-conf"]
-	path = bundle/syntax-slim-conf
-	url = git://github.com/bbommarito/vim-slim.git
 [submodule "bundle/haskell-conceal"]
 	path = bundle/haskell-conceal
 	url = git://github.com/Twinside/vim-haskellConceal.git
@@ -70,3 +67,21 @@
 [submodule "bundle/smart-swap"]
 	path = bundle/smart-swap
 	url = git@github.com:zirrostig/vim-smart-swap.git
+[submodule "bundle/ack.vim"]
+	path = bundle/ack.vim
+	url = git://github.com/mileszs/ack.vim.git
+[submodule "bundle/vim-repeat"]
+	path = bundle/vim-repeat
+	url = https://github.com/tpope/vim-repeat
+[submodule "bundle/vim-unimpaired"]
+	path = bundle/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired
+[submodule "bundle/vim-commentary"]
+	path = bundle/vim-commentary
+	url = git://github.com/tpope/vim-commentary.git
+[submodule "bundle/buftabs"]
+	path = bundle/buftabs
+	url = https://github.com/vim-scripts/buftabs
+[submodule "bundle/vim-indent-guides"]
+	path = bundle/vim-indent-guides
+	url = https://github.com/nathanaelkane/vim-indent-guides
