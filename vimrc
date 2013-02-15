@@ -4,6 +4,7 @@ call pathogen#infect()
 call pathogen#helptags()
 filetype plugin indent on
 runtime macros/matchit.vim
+runtime macros/editexisting.vim
 
 "--> General Settings <------------------------------------------------------
 set autoread
@@ -20,6 +21,7 @@ set shortmess=aoOtI
 set splitbelow
 set splitright
 set switchbuf=usetab,split
+set matchpairs+=<:>,':',":"
 
 "-> GuiOptions
 if has('gui_running')
@@ -89,6 +91,10 @@ colorscheme jellybeans_noFontFX
 hi Comment cterm=None gui=None
 hi SpecialComment cterm=None gui=None
 hi StatusLine cterm=None gui=None
+
+"-> MatchPairs doesn't look like cursor
+hi clear MatchParen
+hi MatchParen term=underline cterm=underline,bold gui=underline,bold
 
 "-> Show invisibles
 "   -> This shows
@@ -212,3 +218,10 @@ endif
 "-> Indent Guides
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=black ctermbg=black
+
+"-> Rainbow Parentheses
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+au Syntax * RainbowParenthesesLoadChevrons
