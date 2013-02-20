@@ -75,6 +75,8 @@ function CurPos(action)
   return ""
 endfunction
 
+
+"Mostly from http://learnvimscriptthehardway.stevelosh.com/chapters/38.html
 function QuickFixToggle()
     if !exists("g:genUtils_QFix")
         let g:genUtils_QFix = 0
