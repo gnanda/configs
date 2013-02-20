@@ -17,6 +17,7 @@ set mouse=n
 set mousefocus
 set mousehide
 set nomore
+set ballooneval
 set shortmess=aoOtI
 set splitbelow
 set splitright
@@ -81,6 +82,11 @@ set smartcase
 set spelllang=en_us
 set spell
 
+"-> Vim auto escapes from insert after a while
+set updatetime=15000
+au CursorHoldI * stopinsert
+
+
 "->Filetype specific
 au BufEnter *.tex set textwidth=100
 au BufEnter *.tex set formatoptions+=t
@@ -115,14 +121,15 @@ set statusline=%f%m%r%=%02.v\|%03.l/%03.L
 let mapleader=","
 
 "-> Leader Commands
-nmap <silent><leader>fs :NoTrail<cr>
-nmap <silent><leader>sv :vsplit<cr>
-nmap <silent><leader>sh :split<cr>
-nmap <silent><leader>sc :close<cr>
-nmap <silent><leader>tn :tabnew<cr>
-nmap <silent><leader>tc :tabclose<cr>
 nmap <silent><leader>c \\
 nmap <silent><leader>C \\u
+nmap <silent><leader>fs :NoTrail<cr>
+nmap <silent><leader>sc :close<cr>
+nmap <silent><leader>sh :split<cr>
+nmap <silent><leader>sq :QFixToggle<cr>
+nmap <silent><leader>sv :vsplit<cr>
+nmap <silent><leader>tn :tabnew<cr>
+nmap <silent><leader>tc :tabclose<cr>
 
 " I hit these too often accidently, and this will save my sanity
 map Q <Nop>
@@ -224,4 +231,3 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
-au Syntax * RainbowParenthesesLoadChevrons
