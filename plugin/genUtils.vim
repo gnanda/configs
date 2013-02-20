@@ -75,9 +75,25 @@ function CurPos(action)
   return ""
 endfunction
 
+function QuickFixToggle()
+    if !exists("g:genUtils_QFix")
+        let g:genUtils_QFix = 0
+    endif
+    if g:genUtils_QFix
+        cclose
+        let g:genUtils_QFix = 0
+        execute g:genUtils_QFix_Return . "wincmd w"
+    else
+        let g:genUtils_QFix_Return = winnr()
+        copen
+        let g:genUtils_QFix = 1
+    endif
+endfunction
+
 
 "Set up commands to make calling above functions easier
 command! -nargs=0 NoTrail call RemoveTrailingWhiteSpace()
 command! -nargs=0 ForceSave call SaveReadOnlyFile()
 command! -nargs=0 TSpellHL call ToggleSpellingHighlight()
+command! -nargs=0 QFixToggle call QuickFixToggle()
 cmap w!! call SaveReadOnlyFile()
