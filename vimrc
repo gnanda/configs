@@ -17,7 +17,6 @@ set mouse=n
 set mousefocus
 set mousehide
 set nomore
-set ballooneval
 set shortmess=aoOtI
 set splitbelow
 set splitright
@@ -27,6 +26,7 @@ set matchpairs+=<:>,':',":"
 "-> GuiOptions
 if has('gui_running')
     set guioptions=act
+    set ballooneval
     if hostname() == 'thwomp'
         set guifont=peep\ 8
     else
