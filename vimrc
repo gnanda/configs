@@ -83,8 +83,8 @@ set spelllang=en_us
 set spell
 
 "-> Vim auto escapes from insert after a while
-set updatetime=15000
-au CursorHoldI * stopinsert
+"set updatetime=15000
+"au CursorHoldI * stopinsert
 
 
 "->Filetype specific
@@ -133,7 +133,7 @@ nmap <silent><leader>tc :tabclose<cr>
 
 " I hit these too often accidently, and this will save my sanity
 map Q <Nop>
-imap <C-w> <Nop>
+"imap <C-w> <Nop>
 
 " This is genius, and set in my shell as well
 cmap ` ~/
@@ -231,3 +231,9 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
+"-> Pymode
+let g:pymode_lint_write = 0
+
+"-> Syntastic
+let g:syntastic_python_checkers=['pyflakes']
