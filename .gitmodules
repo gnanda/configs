@@ -88,3 +88,6 @@
 [submodule "bundle/rainbow-parentheses"]
 	path = bundle/rainbow-parentheses
 	url = git://github.com/kien/rainbow_parentheses.vim.git
+[submodule "bundle/vim-shbed"]
+	path = bundle/vim-shbed
+	url = git@github.com:zirrostig/vim-shbed.git
