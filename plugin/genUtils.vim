@@ -16,6 +16,7 @@ fun! ToggleSpellingHighlight()
     if ! &spell && &ft != 'help' "spell is not set
         echo 'spell is unset -> turning on spell'
         set spell
+        let g:genUtils_SpellHL = 1
     endif
 
     if exists("g:genUtils_SpellHL") && g:genUtils_SpellHL > 0

@@ -108,8 +108,8 @@ hi MatchParen term=underline cterm=underline,bold gui=underline,bold
 "       Empty lines with spaces
 "       Also The foreground and background of these chars are set
 set list listchars=tab:\|\ ,trail:¤,nbsp:¤
-hi SpecialKey ctermbg=NONE
-hi SpecialKey ctermfg=red guifg=red
+hi SpecialKey ctermbg=NONE guibg=NONE
+hi SpecialKey ctermfg=black guifg=black
 
 "-> StatusLine
 set laststatus=2
