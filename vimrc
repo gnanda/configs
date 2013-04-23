@@ -113,7 +113,10 @@ hi SpecialKey ctermfg=black guifg=black
 
 "-> StatusLine
 set laststatus=2
-set statusline=%f%m%r%=%02.v\|%03.l/%03.L
+set statusline=%1*#%n%*\ %f%2*%m%r%*\ %3*%y%*%=%02.v\|%03.l/%03.L
+hi link User1 Number
+hi link User2 Boolean
+hi link User3 Identifier
 
 "--> Mappings <---------------------------------------------------------------
 "Note: More mappings may be in the plugins section
@@ -151,8 +154,8 @@ nnoremap <left> :tabnext<CR>
 nnoremap <right> :tabprevious<CR>
 
 "-> Flip usage of quotes
-noremap ' "
-noremap " '
+"noremap ' "
+"noremap " '
 
 "-> Space clears highlighting
 noremap <silent> <Space> :silent nohl<Bar>echo<CR>
