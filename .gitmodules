@@ -10,9 +10,6 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
-[submodule "bundle/latex-suite"]
-	path = bundle/latex-suite
-	url = git://github.com/gerw/vim-latex-suite.git
 [submodule "bundle/command-t"]
 	path = bundle/command-t
 	url = git://git.wincent.com/command-t.git
@@ -94,3 +91,6 @@
 [submodule "bundle/vim-nubeconf-syntax"]
 	path = bundle/vim-nubeconf-syntax
 	url = git@github.com:zirrostig/vim-nubeconf-syntax.git
+[submodule "bundle/vim-abolish"]
+	path = bundle/vim-abolish
+	url = git://github.com/tpope/vim-abolish.git
