@@ -198,13 +198,6 @@ noremap <F5> :TlistUpdate<cr>
 "-> SuperTab
 let g:SuperTabDefaultCompletionType="context"
 
-"-> Perl-Support
-    "I don't use the gui, this setting doesn't affect me either way
-let g:Perl_LoadMenus='no'
-    "Ctrl-j is for jumping to the next item in a template insertion, but I
-    "already use it for split nav
-let g:Perl_Ctrl_j='off'
-
 "-> Symbols
 let g:symbol_patterns = {}
 let g:symbol_patterns.python = ['^\s*def\s\+\zs\w\+\ze', '^\s*class\s\+\zs\w\+\ze']
@@ -234,9 +227,6 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
-
-"-> Pymode
-let g:pymode_lint_write = 0
 
 "-> Syntastic
 let g:syntastic_python_checkers=['pyflakes']
