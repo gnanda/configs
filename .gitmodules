@@ -1,6 +1,3 @@
-[submodule "bundle/python-mode"]
-	path = bundle/python-mode
-	url = git://github.com/klen/python-mode.git
 [submodule "bundle/pathogen"]
 	path = bundle/pathogen
 	url = git://github.com/tpope/vim-pathogen.git
@@ -19,9 +16,6 @@
 [submodule "bundle/a"]
 	path = bundle/a
 	url = git://github.com/vim-scripts/a.vim.git
-[submodule "bundle/fugitive"]
-	path = bundle/fugitive
-	url = git://github.com/tpope/vim-fugitive.git
 [submodule "bundle/taglist"]
 	path = bundle/taglist
 	url = git://github.com/vim-scripts/taglist.vim.git
@@ -34,21 +28,12 @@
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
-[submodule "bundle/hexHighlight"]
-	path = bundle/hexHighlight
-	url = git://github.com/yurifury/hexHighlight.git
 [submodule "bundle/haskell-conceal"]
 	path = bundle/haskell-conceal
 	url = git://github.com/Twinside/vim-haskellConceal.git
-[submodule "bundle/perl-support"]
-	path = bundle/perl-support
-	url = git://github.com/vim-scripts/perl-support.vim.git
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = git://github.com/ervandew/supertab.git
-[submodule "bundle/simplefold"]
-	path = bundle/simplefold
-	url = git://github.com/vim-scripts/simplefold.git
 [submodule "bundle/skybison"]
 	path = bundle/skybison
 	url = git://github.com/paradigm/SkyBison.git
@@ -57,13 +42,13 @@
 	url = git://github.com/mattsacks/vim-symbols.git
 [submodule "bundle/syntax-jack"]
 	path = bundle/syntax-jack
-	url = git@github.com:zirrostig/vim-jack-syntax.git
+	url = git://github.com/zirrostig/vim-jack-syntax.git
 [submodule "bundle/syntax-scala"]
 	path = bundle/syntax-scala
 	url = git://github.com/jergason/scala.vim.git
 [submodule "bundle/smart-swap"]
 	path = bundle/smart-swap
-	url = git@github.com:zirrostig/vim-smart-swap.git
+	url = git://github.com/zirrostig/vim-smart-swap.git
 [submodule "bundle/ack.vim"]
 	path = bundle/ack.vim
 	url = git://github.com/mileszs/ack.vim.git
@@ -87,10 +72,10 @@
 	url = git://github.com/kien/rainbow_parentheses.vim.git
 [submodule "bundle/vim-shbed"]
 	path = bundle/vim-shbed
-	url = git@github.com:zirrostig/vim-shbed.git
+	url = git://github.com/zirrostig/vim-shbed.git
 [submodule "bundle/vim-nubeconf-syntax"]
 	path = bundle/vim-nubeconf-syntax
-	url = git@github.com:zirrostig/vim-nubeconf-syntax.git
+	url = git://github.com/zirrostig/vim-nubeconf-syntax.git
 [submodule "bundle/vim-abolish"]
 	path = bundle/vim-abolish
 	url = git://github.com/tpope/vim-abolish.git
