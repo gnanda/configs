@@ -80,7 +80,7 @@ set smartcase
 
 "-> Spelling
 set spelllang=en_us
-set spell
+set nospell
 
 "-> Vim auto escapes from insert after a while
 "set updatetime=15000
@@ -179,15 +179,15 @@ noremap <silent><F4> :set list!<CR>
 inoremap <silent><F4> :set list!<CR>
 
 "Toggle spell checker highlighting off initially
-au BufNewFile,BufReadPre,FilterReadPre,FileReadPre * TSpellHL
+"au BufNewFile,BufReadPre,FilterReadPre,FileReadPre * TSpellHL
 noremap <silent><F3> :TSpellHL<cr>
 inoremap <silent><F3> :TSpellHL<cr>
 
 "--> Plugins Galore <---------------------------------------------------------
 "-> Haskell Mode
-let g:haddock_browser="/usr/bin/firefox"
-let g:haddock_indexfiledir="~/.vimlocal"
-au Bufenter *.hs compiler ghc
+"let g:haddock_browser="/usr/bin/firefox"
+"let g:haddock_indexfiledir="~/.vimlocal"
+"au Bufenter *.hs compiler ghc
 
 "-> Taglist
 let Tlist_Ctags_Cmd="/usr/bin/ctags"
