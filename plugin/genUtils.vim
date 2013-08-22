@@ -12,29 +12,29 @@ endfun
 
 "Toggles spell checker highlighting on and off, allowing me to still use
 "spell checker commands, even if the word is not visibly highlighted
-fun! ToggleSpellingHighlight()
-    if ! &spell && &ft != 'help' "spell is not set
-        echo 'spell is unset -> turning on spell'
-        set spell
-        let g:genUtils_SpellHL = 1
-    endif
+" fun! ToggleSpellingHighlight()
+"     if ! &spell && &ft != 'help' "spell is not set
+"         echo 'spell is unset -> turning on spell'
+"         set spell
+"         let g:genUtils_SpellHL = 1
+"     endif
 
-    if exists("g:genUtils_SpellHL") && g:genUtils_SpellHL > 0
-        "Turn it off
-        let g:genUtils_SpellHL = 0
-        highlight SpellBad NONE
-        highlight SpellLocal NONE
-        highlight SpellRare NONE
-        highlight SpellCap NONE
-    else
-        "Turn it on
-        let g:genUtils_SpellHL = 1
-        highlight SpellBad gui=underline term=underline
-        highlight SpellLocal gui=italic term=italic
-        highlight SpellRare gui=bold term=bold
-        highlight SpellCap gui=bold term=bold
-    endif
-endfun
+"     if exists("g:genUtils_SpellHL") && g:genUtils_SpellHL > 0
+"         "Turn it off
+"         let g:genUtils_SpellHL = 0
+"         highlight SpellBad NONE
+"         highlight SpellLocal NONE
+"         highlight SpellRare NONE
+"         highlight SpellCap NONE
+"     else
+"         "Turn it on
+"         let g:genUtils_SpellHL = 1
+"         highlight SpellBad gui=underline term=underline
+"         highlight SpellLocal gui=italic term=italic
+"         highlight SpellRare gui=bold term=bold
+"         highlight SpellCap gui=bold term=bold
+"     endif
+" endfun
 
 "Saves/Restores Cursor position
 "http://vim.wikia.com/wiki/Maintain_cursor_and_screen_position
@@ -97,6 +97,6 @@ endfunction
 "Set up commands to make calling above functions easier
 command! -nargs=0 NoTrail call RemoveTrailingWhiteSpace()
 command! -nargs=0 ForceSave call SaveReadOnlyFile()
-command! -nargs=0 TSpellHL call ToggleSpellingHighlight()
+" command! -nargs=0 TSpellHL call ToggleSpellingHighlight()
 command! -nargs=0 QFixToggle call QuickFixToggle()
 cmap w!! call SaveReadOnlyFile()

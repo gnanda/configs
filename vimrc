@@ -80,7 +80,7 @@ set smartcase
 
 "-> Spelling
 set spelllang=en_us
-set nospell
+" set spell
 
 "-> Vim auto escapes from insert after a while
 "set updatetime=15000
@@ -179,9 +179,9 @@ noremap <silent><F4> :set list!<CR>
 inoremap <silent><F4> :set list!<CR>
 
 "Toggle spell checker highlighting off initially
-"au BufNewFile,BufReadPre,FilterReadPre,FileReadPre * TSpellHL
-noremap <silent><F3> :TSpellHL<cr>
-inoremap <silent><F3> :TSpellHL<cr>
+" au BufNewFile,BufReadPre,FilterReadPre,FileReadPre * TSpellHL
+" noremap <silent><F3> :TSpellHL<cr>
+" inoremap <silent><F3> :TSpellHL<cr>
 
 "--> Plugins Galore <---------------------------------------------------------
 "-> Haskell Mode
@@ -230,3 +230,6 @@ au Syntax * RainbowParenthesesLoadBraces
 
 "-> Syntastic
 let g:syntastic_python_checkers=['pyflakes']
+
+"-> RePaste
+let g:RePaste_DeleteRegister = "r"
