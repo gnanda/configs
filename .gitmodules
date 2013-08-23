@@ -73,9 +73,6 @@
 [submodule "bundle/vim-abolish"]
 	path = bundle/vim-abolish
 	url = git://github.com/tpope/vim-abolish.git
-[submodule "bundle/command-t"]
-	path = bundle/command-t
-	url = https://github.com/wincent/Command-T.git
 [submodule "bundle/vim-repaste"]
 	path = bundle/vim-repaste
 	url = https://github.com/zirrostig/vim-repaste.git
