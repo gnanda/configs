@@ -36,6 +36,9 @@ alias g='git status'
 alias rmtemp='rm *~'
 alias s='/u/eu/be/gnanda/Downloads/Sublime\ Text\ 2/sublime_text'
 
+# Sudo commands
+alias svim='sudo vim'
+
 # Pacman Aliases
 alias update='sudo pacman -Syyu'
 alias install='sudo pacman -S'
