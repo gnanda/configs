@@ -148,11 +148,11 @@ vnoremap ? ?\v
 nnoremap ? ?\v
 
 " A proper use for arrow keys
-nnoremap <down> :bprevious<CR>
-nnoremap <up> :bnext<CR>
-nnoremap <left> :tabnext<CR>
-nnoremap <right> :tabprevious<CR>
-
+"nnoremap <down> :bprevious<CR>
+"nnoremap <up> :bnext<CR>
+"nnoremap <left> :tabnext<CR>
+"nnoremap <right> :tabprevious<CR>
+"
 "-> Flip usage of quotes
 "noremap ' "
 "noremap " '
@@ -233,3 +233,7 @@ let g:syntastic_python_checkers=['pyflakes']
 
 "-> RePaste
 let g:RePaste_DeleteRegister = "r"
+
+"-> Pydiction
+"filetype plugin on
+"let g:pydiction_location='/usr/share/pydiction/complete-dict'

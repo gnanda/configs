@@ -40,9 +40,9 @@ alias s='/u/eu/be/gnanda/Downloads/Sublime\ Text\ 2/sublime_text'
 alias svim='sudo vim'
 
 # Pacman Aliases
-alias update='sudo pacman -Syyu'
-alias install='sudo pacman -S'
-alias pacsearch='pacman -Ss'
+alias update='sudo packer -Syyu'
+alias install='sudo packer -S'
+alias pacsearch='packer -Ss'
 
 # Git aliases
 alias gs='git status '
@@ -63,3 +63,5 @@ if [ -f /etc/bashrc ]; then
 fi
 
 mesg n
+
+fortune | cowsay -f tux
