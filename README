@@ -11,6 +11,3 @@ Install:
 Command-T Install:
     cd ~/.vim/bundle/command-t
     rake make
-
-Notes:
-    I can now do my job
